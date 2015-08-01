@@ -99,7 +99,7 @@ public class ForecastFragment extends Fragment {
         String location = prefs.getString(getString(R.string.pref_location_key),
                 getString(R.string.pref_location_default));
 
-        if (location.length() < 5) {
+        if (location.length() != 5) {
             location = "94043";
             weatherTask.execute(location);
         } else {
